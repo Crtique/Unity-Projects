@@ -16,7 +16,7 @@ public class BasicEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Check if space is pressed
+        // Check if when the last time a bullet has been shot
         if (Time.time - timeOfLastShot >= bulletDelay)
         {
             Shoot();
