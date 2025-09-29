@@ -1,15 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.0f; //Give player speed
     public int playerHealth = 100;
-
+    public Text textbox;
     private int bruteDamage = 20;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        textbox = GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
         // Horizontal Inputs
         transform.Translate(movement * Time.deltaTime * speed);
+
+        // Show health onscreen
+        textbox.text = "Health:" + playerHealth;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,8 +32,6 @@ public class PlayerController : MonoBehaviour
         // Check if the player has been hit by the enemy
         if (CompareTag("Player") && other.CompareTag("EnemyBullet"))
         {
-            Debug.Log("Player Hit!");
-
             Destroy(other.gameObject); // Destroy the bullet
 
             // Decrease health
@@ -44,7 +46,6 @@ public class PlayerController : MonoBehaviour
         }
         else if (CompareTag("Player") && other.CompareTag("EnemyBrute"))
         {
-            Debug.Log("Brute Hit!");
             Destroy(other.gameObject);
             playerHealth -= bruteDamage;
         }
