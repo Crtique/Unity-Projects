@@ -3,44 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|c:\\users\\je4vo\\desktop\\unity-projects\\minigame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|c:\\users\\je4vo\\desktop\\unity-projects\\minigame\\assets\\scripts\\bulletshoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletshoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\enemy scripts\\enemymove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy scripts\\enemymove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\enemy scripts\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy scripts\\enemybullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\enemy scripts\\basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy scripts\\basicenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\destroyoutofbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\destroyoutofbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|c:\\users\\je4vo\\desktop\\unity-projects\\minigame\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\detectcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\detectcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\bulletshoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bulletshoot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\moveforward.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\moveforward.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\assets\\scripts\\movebrute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\movebrute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|c:\\users\\je4vo\\desktop\\unity-projects\\minigame\\assets\\scripts\\gamemechanics\\detectcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EE9E83C-A045-E1FE-74E5-021BD852819B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemechanics\\detectcollision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,129 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "DetectCollision.cs",
+              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\GameMechanics\\DetectCollision.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameMechanics\\DetectCollision.cs",
+              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\GameMechanics\\DetectCollision.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameMechanics\\DetectCollision.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T03:44:00.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BulletShoot.cs",
               "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\BulletShoot.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BulletShoot.cs",
               "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\BulletShoot.cs",
               "RelativeToolTip": "Assets\\Scripts\\BulletShoot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-28T09:18:17.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-27T20:19:39.464Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DetectCollision.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\DetectCollision.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DetectCollision.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\DetectCollision.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DetectCollision.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T08:47:15.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EnemySpawner.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\EnemySpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnemySpawner.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\EnemySpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnemySpawner.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwBUAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T00:17:22.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MoveBrute.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\MoveBrute.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MoveBrute.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\MoveBrute.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MoveBrute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T00:16:13.516Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MoveForward.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\MoveForward.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\MoveForward.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\MoveForward.cs",
-              "RelativeToolTip": "Assets\\Scripts\\MoveForward.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T20:19:37.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DestroyOutOfBounds.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\DestroyOutOfBounds.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DestroyOutOfBounds.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\DestroyOutOfBounds.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DestroyOutOfBounds.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T20:19:34.32Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnemyMove.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\Enemy Scripts\\EnemyMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\EnemyMove.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\Enemy Scripts\\EnemyMove.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\EnemyMove.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T20:19:32.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnemyBullet.cs",
-              "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\Enemy Scripts\\EnemyBullet.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\EnemyBullet.cs",
-              "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\Enemy Scripts\\EnemyBullet.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\EnemyBullet.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T20:19:29.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "BasicEnemy.cs",
               "DocumentMoniker": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\Enemy Scripts\\BasicEnemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy Scripts\\BasicEnemy.cs",
               "ToolTip": "C:\\Users\\je4vo\\Desktop\\Unity-Projects\\Minigame\\Assets\\Scripts\\Enemy Scripts\\BasicEnemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy Scripts\\BasicEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-27T20:19:26.066Z"
+              "WhenOpened": "2025-09-27T20:19:26.066Z",
+              "EditorCaption": ""
             }
           ]
         }

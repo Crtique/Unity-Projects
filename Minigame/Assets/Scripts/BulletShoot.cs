@@ -20,7 +20,7 @@ public class BulletShoot : MonoBehaviour
         // Check if space is pressed
         if (Input.GetKeyDown(KeyCode.Space) && Time.time - timeOfLastShot >= bulletDelay)
         {
-            Shoot();
+            Shoot(); // Call the shoot function
             timeOfLastShot = Time.time;
         }
     }
