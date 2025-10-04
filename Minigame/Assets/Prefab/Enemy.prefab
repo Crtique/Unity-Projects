@@ -168,6 +168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 619caa032ec8e8d40bb6f207edde051b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DetectCollision
+  upgradeDrops:
+  - {fileID: 8383994801927203322, guid: 73ec2044f9690d84badbe1d1edc631ad, type: 3}
+  - {fileID: 2020458987979724034, guid: 280d37b98c16e8e4fafe0e74f1c20b12, type: 3}
+  dropChance: 0.2
+  pointsWorth: 5
 --- !u!65 &1905394043456666028
 BoxCollider:
   m_ObjectHideFlags: 0

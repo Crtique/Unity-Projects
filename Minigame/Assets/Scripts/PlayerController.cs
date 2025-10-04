@@ -4,13 +4,16 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public float speed = 10.0f; //Give player speed
-    public int playerHealth = 100;
-    public Text textbox;
-    private int bruteDamage = 20;
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        textbox = GetComponent<Text>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -23,8 +26,7 @@ public class PlayerController : MonoBehaviour
         // Horizontal Inputs
         transform.Translate(movement * Time.deltaTime * speed);
 
-        // Show health onscreen
-        textbox.text = "Health:" + playerHealth;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,12 +36,11 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject); // Destroy the bullet
 
-            // Decrease health
-            playerHealth--;
+            TakeDamage(5);
 
 
             // Check when the players health drops to zero or less when it does destroy/kill player
-            if (playerHealth <= 0)
+            if (currentHealth <= 0)
             {
                 Destroy(gameObject);
             }
@@ -47,7 +48,34 @@ public class PlayerController : MonoBehaviour
         else if (CompareTag("Player") && other.CompareTag("EnemyBrute"))
         {
             Destroy(other.gameObject);
-            playerHealth -= bruteDamage;
+            TakeDamage(20);
         }
+
+        if (other.CompareTag("HealthDrop"))
+        {
+            Health(10);
+            Debug.Log("Health Picked Up!");
+            Destroy(other.gameObject);
+            
+        }
+
+    }
+
+    void TakeDamage(int damage)
+    {
+        // Take damage when hit
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
+
+    void Health(int health)
+    {
+        currentHealth += health;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        healthBar.SetHealth(currentHealth);
     }
 }

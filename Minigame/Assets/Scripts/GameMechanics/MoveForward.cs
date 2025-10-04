@@ -3,6 +3,7 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     private float speed = 10.0f;
+    private float fallSpeed = 5.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,13 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed *  Time.deltaTime);
+        if (tag == "HealthDrop" || tag == "UpgradeBox")
+        {
+            transform.Translate(Vector3.back * fallSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
 }
