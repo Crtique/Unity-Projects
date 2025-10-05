@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour
     private float startDelay = 2f;
     private float spawnInterval = 1.5f;
 
-    private float bruteSpawnInterval = 10.0f;
+    private float bruteSpawnInterval = 2.0f;
 
 
     private int spawnCount = 5;

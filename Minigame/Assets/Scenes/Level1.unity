@@ -119,6 +119,27 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &58481748 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 631568603548576948, guid: e62dff181d61a114a907e3793df5a4be, type: 3}
+  m_PrefabInstance: {fileID: 4186976204923623399}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &58481755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58481748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5f43444dcf1b74baa5b5aa7da430e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletShoot
+  bulletDelay: 0.1
+  bulletPrefab: {fileID: 8185480004595115299, guid: 2806518953c965b49b00aebdb0029465, type: 3}
+  doubleShotDurration: 10
+  doubleShotOffset: 0
 --- !u!1 &254776154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,11 +1379,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4029994000172858688, guid: e62dff181d61a114a907e3793df5a4be, type: 3}
+      propertyPath: pointsWorth
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4019156576978329518, guid: e62dff181d61a114a907e3793df5a4be, type: 3}
+    - {fileID: 6799637904135493096, guid: e62dff181d61a114a907e3793df5a4be, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 631568603548576948, guid: e62dff181d61a114a907e3793df5a4be, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 58481755}
   m_SourcePrefab: {fileID: 100100000, guid: e62dff181d61a114a907e3793df5a4be, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

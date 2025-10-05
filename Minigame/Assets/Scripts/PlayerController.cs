@@ -3,17 +3,20 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    private BulletShoot bulletShoot;
+    public HealthBar healthBar;
+
     public float speed = 10.0f; //Give player speed
     public int maxHealth = 100;
-    public int currentHealth;
-
-    public HealthBar healthBar;
+    public static int currentHealth;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        bulletShoot = GetComponent<BulletShoot>();
     }
 
     // Update is called once per frame
@@ -59,9 +62,16 @@ public class PlayerController : MonoBehaviour
             
         }
 
+        // Double shot upgrade
+        if (other.CompareTag("UpgradeBox"))
+        {
+            bulletShoot.ActivateDoubleShot();
+            Debug.Log("picked up");
+            Destroy(other.gameObject);
+        }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         // Take damage when hit
         currentHealth -= damage;

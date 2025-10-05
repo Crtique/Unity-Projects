@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5854364173056685189}
   - component: {fileID: 5512827080666367642}
   - component: {fileID: 2957447277527998887}
+  - component: {fileID: 3851007099472842191}
   m_Layer: 0
   m_Name: Health Drop
   m_TagString: HealthDrop
@@ -152,3 +153,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3851007099472842191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020458987979724034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e858ec0684d77941949171a2a440496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyOutOfBounds

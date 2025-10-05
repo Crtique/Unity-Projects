@@ -20,7 +20,7 @@ public class MoveForward : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(transform.forward * speed * Time.deltaTime);
         }
     }
 }
