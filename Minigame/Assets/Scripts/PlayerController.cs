@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("HealthDrop"))
         {
             Health(10);
-            Debug.Log("Health Picked Up!");
             Destroy(other.gameObject);
             
         }
@@ -66,7 +65,6 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("UpgradeBox"))
         {
             bulletShoot.ActivateDoubleShot();
-            Debug.Log("picked up");
             Destroy(other.gameObject);
         }
     }

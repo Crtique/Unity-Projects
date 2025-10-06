@@ -51,7 +51,6 @@ public class BulletShoot : MonoBehaviour
             // Create the two bullets
             GameObject bullet1 = Instantiate(bulletPrefab, leftOffset, leftRotation);
             GameObject bullet2 = Instantiate(bulletPrefab, rightOffset, rightRotation);
-            Debug.Log("TwoShot");
         }
         else
         {
