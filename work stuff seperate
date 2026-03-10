@@ -1,0 +1,256 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+
+public class PlayerController : MonoBehaviour
+{
+    // -- Declare Variables ---
+    [Header("Gameplay Settings")]
+    public float speed = 5f;
+    public float jumpHeight = 5f;
+    public float gravity = -9.81f;
+
+    public float groundSlam = -30f;
+
+
+    [Header("Ground Checks")]
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+    
+
+    [Header("Dashing Settings")]
+    public float dashPower = 20f;
+    public float dashTime = 0.3f;
+    public float dashCoolDown = 0.75f;
+
+    private int dashCount = 3;
+    public float dashRecharge = 1.5f;
+    int currentDashCharges;
+
+
+    [Header("Sliding Settings")]
+    public float slidingSpeed = 12f;
+    public float slideingDuration = 0.5f;
+    private Vector3 slideDirection;
+
+    private float originalHeight;
+    private Vector3 originalCenter;
+
+
+    [Header("WallJump Settings")]
+    public float wallDistance = 0.4f;
+    public LayerMask wallMask;
+
+
+    [Header("Camera Setteings for Sliding")]
+    public Transform cameraTransform;
+    private Vector3 cameraOriginalLocalPos;
+    public float cameraSlideOffset = -0.5f;
+    public float cameraSlideTilt = 15f;
+    public float cameraSlideSpeed = 10f;
+
+
+    // Components
+    CharacterController controller;
+    public AudioSource shoot;
+    public AudioSource slam;
+
+    // Vector3 variables
+    Vector3 velocity;
+    Vector3 wallNormal;
+
+    // Boolean variables
+    bool isGrounded;
+    bool touchingWall;
+    bool isDashing = true;
+    bool isSliding = false;
+    bool isGroundSlaming = false;
+    // -------------------------------------- //
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        controller = GetComponent<CharacterController>();
+        currentDashCharges = dashCount;
+        cameraOriginalLocalPos = cameraTransform.localPosition;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Create sphere to check the distance between the ground and the player
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        // Check if we are grounded and apply the Velocity
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        // Apply the Gravity
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
+
+        #region Player Inputs 
+        // --- Player Dashing ---
+        if (Input.GetKeyDown(KeyCode.LeftShift) && isDashing && currentDashCharges > 0)
+        {
+            StartCoroutine(Dash());
+        }
+        // --- Player GroundSlam ---
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isGrounded)
+        {
+            velocity.y = groundSlam;
+            isGroundSlaming = true;
+        }
+        if(isGrounded && isGroundSlaming)
+        {
+            slam.Play();
+            isGroundSlaming = false;
+        }
+        // --- Player Jump ---
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+        }
+        // -- Player Slide --
+        if (Input.GetKeyDown(KeyCode.LeftControl) && !isSliding && isGrounded)
+        {
+            StartCoroutine(Sliding());
+        }
+        // shoot testing
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            shoot.Play();
+        }
+        #endregion 
+
+        Move();
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (!controller.isGrounded && Mathf.Abs(hit.normal.y) < 0.2f)
+        {
+            if (touchingWall && !isGrounded && Input.GetButtonDown("Jump"))
+            {
+                wallNormal = hit.normal;
+                Debug.DrawRay(hit.point, hit.normal, Color.red, 1.25f);
+
+                velocity = wallNormal * speed;
+                velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
+            }
+        }
+        
+    }
+    void Move()
+    {
+        if (isSliding) return;
+
+        // Grab the X and Z inputs to allow Movement on those Axis
+        float xMove = Input.GetAxis("Horizontal");
+        float zMove = Input.GetAxis("Vertical");
+
+        // Multiplie our right ransform and forward transforms with the X and Z Inputs
+        Vector3 move = transform.right * xMove + transform.forward * zMove;
+        // Move Player
+        controller.Move(move * speed * Time.deltaTime);
+    }
+
+    void WallJump()
+    {
+    }
+
+    private IEnumerator Dash()
+    {
+        currentDashCharges--;
+        Debug.Log("Dash Used! Charges left: " + currentDashCharges);
+
+        StartCoroutine(DashCharge());
+
+        isDashing = false;
+
+        float xMove = Input.GetAxisRaw("Horizontal");
+        float zMove = Input.GetAxisRaw("Vertical");
+
+        Vector3 dashDirection = transform.right * xMove + transform.forward * zMove;
+
+        // If no movement input, dash forward
+        if (dashDirection == Vector3.zero)
+        {
+            dashDirection = transform.forward;
+        }
+
+        dashDirection.Normalize();
+
+        velocity = dashDirection * dashPower;
+
+        yield return new WaitForSeconds(dashTime);
+        velocity = Vector3.zero;
+        yield return new WaitForSeconds(dashCoolDown);
+        isDashing = true;
+    }
+
+    private IEnumerator DashCharge()
+    {
+        yield return new WaitForSeconds(dashRecharge);
+
+        if (currentDashCharges < dashCount)
+        {
+            currentDashCharges++;
+            Debug.Log("Dash Recharged! Charges: " + currentDashCharges);
+        }
+    }
+
+    private IEnumerator Sliding()
+    {
+        slideDirection = transform.forward;
+
+        isSliding = true;
+        
+        // orginal Values of the character controller
+        originalHeight = controller.height;
+        originalCenter = controller.center;
+
+        // Slide Shrinking
+        float heightDifference = controller.height - (originalHeight / 2f);
+        controller.height = originalHeight / 2f;
+        controller.center -= new Vector3(0, heightDifference / 2f, 0);
+
+        // Small downward push to stick to ground
+        controller.Move(Vector3.down * 0.05f);
+
+        while (Input.GetKey(KeyCode.LeftControl) && isGrounded)
+        {
+            // Keep applying forward slide velocity
+            velocity = slideDirection * slidingSpeed + Vector3.up * velocity.y;
+
+            // Smoothly move and tilt camera
+            Vector3 targetCamPos = cameraOriginalLocalPos + new Vector3(0, cameraSlideOffset, 0);
+            cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, targetCamPos, Time.deltaTime * cameraSlideSpeed);
+
+            Quaternion targetCamRot = Quaternion.Euler(0, 0, cameraSlideTilt);
+            cameraTransform.localRotation = Quaternion.Slerp(cameraTransform.localRotation, targetCamRot, Time.deltaTime * cameraSlideSpeed);
+
+            yield return null; // wait until next frame
+        }
+
+        // Restore height and center
+        controller.height = originalHeight;
+        controller.center = originalCenter;
+
+        // Reset camera smoothly
+        cameraTransform.localPosition = cameraOriginalLocalPos;
+        cameraTransform.localRotation = Quaternion.Euler(0, 0, 0);
+
+        // Restore after releasing the key
+        velocity = Vector3.zero;
+        isSliding = false;
+    }
+}
